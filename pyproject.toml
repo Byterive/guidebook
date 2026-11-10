@@ -1,0 +1,24 @@
+[project]
+name = "guidebook"
+version = "0.1.1"
+description = "Turn a project into plain-language HTML guides and keep them current."
+license = { text = "MIT" }
+requires-python = ">=3.10"
+dependencies = ["markdown"]
+authors = [{ name = "Junaid Iqbal" }]
+
+[project.urls]
+Repository = "https://github.com/Byterive/guidebook"
+
+[project.scripts]
+guidebook = "guidebook.__main__:main"
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+guidebook = ["theme/*", "theme/templates/*", "theme/dashboard/*", "theme/dashboard/.streamlit/*"]

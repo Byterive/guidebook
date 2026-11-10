@@ -1,0 +1,11 @@
+#!/usr/bin/env python3
+"""Launcher: runs guidebook from this folder's src/ without installing it (`python bin/guidebook status .`)."""
+import sys
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "src"))
+
+from guidebook.__main__ import main  # noqa: E402
+
+if __name__ == "__main__":
+    sys.exit(main())

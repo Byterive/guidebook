@@ -1,0 +1,8 @@
+guidebook
+Copyright (c) 2026 Junaid Iqbal (Byterive). Licensed under the MIT licence (see LICENSE).
+
+The style-guide/ folder (CSS, templates, Streamlit dashboard kit, site builder, sample site)
+is the owner's own work, copied from the project where the first guidebook was built.
+Copies with changes live in src/guidebook/theme/.
+
+Outside packages: the `markdown` Python package; Google Fonts (named in the style files).

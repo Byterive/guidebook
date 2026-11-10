@@ -1,0 +1,29 @@
+/* Global stylesheet for the dashboard look. Inject once per page (see ui_helpers.apply_style). Theme colours and the font come from config.toml. */
+h1 { font-stretch: 62%; font-weight: 700 !important; letter-spacing: .005em; line-height: .95 !important; }
+h2, h3 { font-stretch: 75%; font-weight: 700 !important; }
+header[data-testid="stHeader"] { background: #18222A; }
+header[data-testid="stHeader"] a, header[data-testid="stHeader"] span, header[data-testid="stHeader"] button { color: #F2EBD3; }
+.sg-lede { font-size: 1.05rem; line-height: 1.45; color: #2A3740; max-width: 60ch; margin: 0 0 .5rem; }
+.sg-board { background: #18222A; color: #F2EBD3; border-radius: 6px; padding: 18px 18px 12px; overflow-x: auto; }
+.sg-board h2 { margin: 0; font-size: 1.6rem; color: #F2EBD3; }
+.sg-board .fresh { margin: 0; font-size: .82rem; color: #E8C27A; }
+.sg-board .fresh.ok { color: #A9B5BC; }
+.sg-board table { border-collapse: separate; border-spacing: 0 6px; width: 100%; min-width: 760px; margin-top: 6px; }
+.sg-board th { font-weight: 500; font-size: .8rem; color: #A9B5BC; text-align: left; padding: 0 12px 2px 0; border: 0; background: none; }
+.sg-board td { padding: 0 12px 0 0; vertical-align: middle; border: 0; background: none; }
+.sg-board .foot { margin: 8px 0 0; font-size: .75rem; color: #A9B5BC; }
+.sg-flap { position: relative; display: inline-flex; align-items: center; background-color: #24313B; color: #F2EBD3; font-stretch: 75%; font-weight: 600; font-size: 1.15rem;
+        line-height: 1; padding: 9px 10px 8px; border-radius: 3px; white-space: nowrap; font-variant-numeric: tabular-nums; box-sizing: border-box; }
+.sg-flap { background-image: linear-gradient(to bottom, transparent calc(50% - 1px), rgba(14,22,28,.22) calc(50% - 1px), rgba(14,22,28,.22) 50%, transparent 50%); }  /* the split, behind the text */
+.sg-flap.wide { min-width: 100%; }
+.sg-flap.run { color: #F2B33D; }
+.sg-flap.miss { color: #A9B5BC; font-style: italic; font-weight: 500; }
+.sg-chip { display: inline-flex; align-items: center; justify-content: center; min-width: 34px; font-stretch: 75%; font-weight: 600; font-size: .95rem; padding: 5px 7px 4px;
+           border-radius: 2px; font-variant-numeric: tabular-nums; }
+.sg-matrix { border-collapse: collapse; width: 100%; font-variant-numeric: tabular-nums; }
+.sg-matrix th { font-weight: 500; font-size: .8rem; color: #46545C; text-align: left; padding: 0 8px 8px 0; border: 0; background: none; }
+.sg-matrix td { font-size: .9rem; padding: 6px 8px 6px 0; border: 0; border-top: 1px solid #D3DAD7; background: none; }
+@media (prefers-reduced-motion: no-preference) {
+  .sg-board tbody .sg-flap { animation: sg-flip .38s cubic-bezier(.3,.7,.2,1) both; }
+  @keyframes sg-flip { 0% { transform: perspective(300px) rotateX(-88deg); opacity: .2; } 100% { transform: none; opacity: 1; } }
+}

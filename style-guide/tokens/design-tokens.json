@@ -1,0 +1,78 @@
+{
+ "note": "Generated. Colours and sizes of the look. Dashboard = the Streamlit theme plus the status/board colours; site = the documentation site's light and dark palettes.",
+ "dashboard": {
+  "theme": {
+   "base": "light",
+   "primaryColor": "#18222A",
+   "backgroundColor": "#D9DFDC",
+   "secondaryBackgroundColor": "#EEF2F0",
+   "textColor": "#16232B",
+   "linkColor": "#2F5D7A",
+   "borderColor": "#C9D2CE",
+   "baseRadius": "small",
+   "font": "Archivo:https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..700&display=swap",
+   "sidebar": {
+    "backgroundColor": "#EEF2F0"
+   }
+  },
+  "sidebar": {
+   "backgroundColor": "#EEF2F0"
+  },
+  "header_background": "#18222A",
+  "header_ink": "#F2EBD3",
+  "board": {
+   "ink": "#F2EBD3",
+   "background": "#18222A",
+   "amber": "#F2B33D"
+  },
+  "status_color": {
+   "PASSED": "#2F7D6D",
+   "DOUBTFUL": "#E2A93B",
+   "FAILED": "#B4483C",
+   "UNKNOWN": "#4A5862",
+   "UNTESTED": "#3F6C9A",
+   "n/a": "#8C989E"
+  },
+  "status_ink": {
+   "PASSED": "#FFFFFF",
+   "DOUBTFUL": "#18222A",
+   "FAILED": "#FFFFFF",
+   "UNKNOWN": "#FFFFFF",
+   "UNTESTED": "#FFFFFF",
+   "n/a": "#46545C"
+  },
+  "status_order": [
+   "PASSED",
+   "DOUBTFUL",
+   "UNKNOWN",
+   "UNTESTED",
+   "FAILED"
+  ]
+ },
+ "site": {
+  "light": {
+   "bg": "#fbfbfd",
+   "fg": "#1c2330",
+   "mut": "#5d6778",
+   "line": "#e2e6ee",
+   "acc": "#1f5fbf",
+   "card": "#fff",
+   "soft": "#f1f4f9",
+   "shadow": "0 6px 24px rgba(20,30,50,.10)"
+  },
+  "dark": {
+   "bg": "#12151c",
+   "fg": "#e7eaf0",
+   "mut": "#9aa5b8",
+   "line": "#2a3141",
+   "acc": "#7db2ff",
+   "card": "#1a1f29",
+   "soft": "#1a1f29",
+   "shadow": "0 6px 24px rgba(0,0,0,.45)"
+  },
+  "font": "system-ui,\"Segoe UI\",Roboto,sans-serif",
+  "base_size_px": 18,
+  "content_max_width_px": 800,
+  "page_max_width_px": 1180
+ }
+}

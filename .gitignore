@@ -1,0 +1,19 @@
+# secrets
+.env
+.env.*
+*.pem
+*.key
+secrets/
+# editors and OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+# caches
+__pycache__/
+*.pyc
+node_modules/
+.guidebook/cache/
+# build output
+build/
+*.egg-info/

@@ -1,0 +1,41 @@
+/* Generated. Design tokens as custom properties. Dashboard = Streamlit app; site = documentation site. */
+:root {
+  --sg-dash-bg: #D9DFDC;
+  --sg-dash-panel: #EEF2F0;
+  --sg-dash-ink: #16232B;
+  --sg-dash-link: #2F5D7A;
+  --sg-dash-border: #C9D2CE;
+  --sg-dash-primary: #18222A;
+  --sg-dash-header: #18222A;
+  --sg-dash-board-ink: #F2EBD3;
+  --sg-dash-amber: #F2B33D;
+  --sg-status-passed: #2F7D6D;
+  --sg-status-doubtful: #E2A93B;
+  --sg-status-failed: #B4483C;
+  --sg-status-unknown: #4A5862;
+  --sg-status-untested: #3F6C9A;
+  --sg-status-passed-ink: #FFFFFF;
+  --sg-status-doubtful-ink: #18222A;
+  --sg-status-failed-ink: #FFFFFF;
+  --sg-status-unknown-ink: #FFFFFF;
+  --sg-status-untested-ink: #FFFFFF;
+  --sg-site-bg: #fbfbfd;
+  --sg-site-fg: #1c2330;
+  --sg-site-mut: #5d6778;
+  --sg-site-line: #e2e6ee;
+  --sg-site-acc: #1f5fbf;
+  --sg-site-card: #fff;
+  --sg-site-soft: #f1f4f9;
+  --sg-site-shadow: 0 6px 24px rgba(20,30,50,.10);
+}
+
+:root[data-theme="dark"] {
+  --sg-site-bg: #12151c;
+  --sg-site-fg: #e7eaf0;
+  --sg-site-mut: #9aa5b8;
+  --sg-site-line: #2a3141;
+  --sg-site-acc: #7db2ff;
+  --sg-site-card: #1a1f29;
+  --sg-site-soft: #1a1f29;
+  --sg-site-shadow: 0 6px 24px rgba(0,0,0,.45);
+}
