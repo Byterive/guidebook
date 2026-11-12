@@ -9,11 +9,22 @@ secrets/
 .idea/
 .DS_Store
 Thumbs.db
+# Claude local state
+.claude/settings.local.json
+.claude/settings.json.bak
 # caches
 __pycache__/
 *.pyc
 node_modules/
+# guidebook
 .guidebook/cache/
-# build output
+docs/guide/
+.claude/settings.local.json.bak
+
+# local audit notes
+_audit/
+
+# Build output
 build/
 *.egg-info/
+.kickoff/backup/

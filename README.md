@@ -2,7 +2,7 @@
 
 Plain-language guides, refreshed when your project changes.
 
-Version 0.1.1 · early, working
+Version 0.2.0 · early, working
 
 ## What it does
 
@@ -37,11 +37,9 @@ Lower-level steps: `python -m guidebook pages <project folder> --no-model` write
 ## Needs and limits
 
 - Python 3.10 or newer, and the `markdown` package (`pip install markdown`).
-- Claude Code is optional. Without it, guidebook writes the pages without model text (`--no-model`). With it, short "In plain words" sections are written through `claude -p`, cached in `.guidebook/cache`.
+- Claude Code is optional. Without it, guidebook writes the pages without model text (`--no-model`). With it, `guidebook explain` and the model steps of `pages` and `update` send text taken from your project (after the scrubbing described below) to Claude through `claude -p`, and the answers are cached on disk in `<project>/.guidebook/cache`. Use `--no-model` to send nothing.
 - It writes only `.guidebook/` and `docs/guide-src/` (plus the built `docs/guide/`). It skips secrets, `.env*`, keys and git-ignored files, and scrubs the emails, tokens and absolute paths it recognises before anything is stored or written; check the output before you share a guide.
 - Still early. We have checked the pages in Chrome only. Where the project does not say something, the guide says "not known".
-
-To run the tests: `cd tests && python -m unittest`.
 
 ## Licence
 

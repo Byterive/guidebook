@@ -1,6 +1,6 @@
 {
   "name": "guidebook",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "displayName": "Guidebook",
   "description": "Reads any project and writes plain-language HTML guides in several versions (layman, client, teammate, maintainer, quick-start), and keeps them current as the project changes.",
   "author": {
