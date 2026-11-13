@@ -1,21 +1,6 @@
 # Components
 
-Every class starts with `sg-` (dashboard) or is a plain name inside the site stylesheet. Colours come from `tokens/`. Nothing here needs anything outside this folder.
-
-## Dashboard (Streamlit) - files in `dashboard/`
-
-| Component | Class / function | Use it for | Snippet |
-|---|---|---|---|
-| Dark header | set by `ui_style.css` on Streamlit's header | page tabs and drop-downs | `st.navigation(PAGES, position="top")` |
-| Lede | `sg-lede` | one sentence under the title | `st.html('<p class="sg-lede">...</p>')` |
-| Board | `sg-board` + `board_html()` | a live list where status is the point | `st.html(board_html(rows))` |
-| Split-flap cell | `sg-flap` (+ `wide`, `run`, `miss`), `flap()` | one value on the board | `flap("PASSED", "PASSED")` |
-| Status tag | `sg-chip`, `status_tag()` | a status word inline | `st.html(status_tag("FAILED"))` |
-| Count chip | `sg-chip`, `status_chip()` | a count in its status colour (zero stays plain) | `status_chip(3, "PASSED")` |
-| Matrix | `sg-matrix` + `matrix_html()` | counts per group and status | `st.html(matrix_html(counts))` |
-| Painted table | `style_status()` | status words in a sortable table | `st.dataframe(style_status(df, ["Status"]))` |
-| Dot | `dot()` | health of a data source: ok, stale, failed, missing | `dot("Data: fresh", "ok")` |
-| Sidebar | `sidebar()` | app name + short captions | `sidebar("My app", ["Read-only"])` |
+Every class is a plain name inside the site stylesheet. Colours come from `tokens/`. Nothing here needs anything outside this folder.
 
 Status meanings (keep them everywhere): PASSED green, DOUBTFUL amber, FAILED red, UNKNOWN slate, UNTESTED blue, n/a grey outline. The word always stays on the colour.
 

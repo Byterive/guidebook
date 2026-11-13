@@ -1,7 +1,7 @@
 guidebook
 Copyright (c) 2026 Junaid Iqbal (Byterive). Licensed under the MIT licence (see LICENSE).
 
-The style-guide/ folder (CSS, templates, Streamlit dashboard kit, site builder, sample site)
+The style-guide/ folder (the site stylesheet and templates, the static site builder source, the content rules, the design tokens, and its README and components notes)
 is the owner's own work, copied from the project where the first guidebook was built.
 Copies with changes live in src/guidebook/theme/.
 

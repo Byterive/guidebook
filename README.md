@@ -1,12 +1,16 @@
+![guidebook: plain-language guides, refreshed when your project changes](assets/readme-banner.png)
+
 # guidebook
 
 Plain-language guides, refreshed when your project changes.
 
-Version 0.2.0 · early, working
+Version 0.2.1 · early, working
 
 ## What it does
 
 We built guidebook to turn a project into guides that people who are not the author can read. It reads the project folder, writes guides for different readers (a client, a new teammate, a maintainer), builds them as web pages, and refreshes only the pages whose sources changed when you run `update`. It never edits your existing files; it writes only `.guidebook/`, `docs/guide-src/` and `docs/guide/`.
+
+![How Guidebook works: read the project files, init to approve guide versions, build pages for each reader version, update when the project changes, serve a local preview](assets/workflow.png)
 
 ## Install
 
@@ -17,7 +21,20 @@ As a Claude Code plugin, through the Byterive marketplace:
 /plugin install guidebook@byterive-kit
 ```
 
-We have not yet tested the marketplace install end to end. It works when Claude Code loads the plugin from a folder, and the tool also runs from a clone of this repository (see below).
+The tool also runs from a clone of this repository (see below).
+
+## Try it
+
+1. `/guidebook:guide init`
+   It proposes guide versions with reasons. Add `--yes` to approve; it then writes `.guidebook/guide.json` and builds the first guide.
+2. `/guidebook:guide status`
+   It says whether the guide is fresh or stale, and why.
+3. `/guidebook:guide update --no-model`
+   It rewrites only the pages whose sources changed and keeps your own edits. With `--no-model`, nothing is sent to Claude.
+
+![Sample project: the home page of a guide built by guidebook init with --no-model, with the banner that says the guide shows the project as of its last build](assets/guide-page.png)
+
+*Sample project, built with `--no-model`.*
 
 ## What you get
 
@@ -37,12 +54,13 @@ Lower-level steps: `python -m guidebook pages <project folder> --no-model` write
 ## Needs and limits
 
 - Python 3.10 or newer, and the `markdown` package (`pip install markdown`).
-- Claude Code is optional. Without it, guidebook writes the pages without model text (`--no-model`). With it, `guidebook explain` and the model steps of `pages` and `update` send text taken from your project (after the scrubbing described below) to Claude through `claude -p`, and the answers are cached on disk in `<project>/.guidebook/cache`. Use `--no-model` to send nothing.
+- Claude Code is optional. Without it, guidebook writes the pages without model text (`--no-model`). With it, `guidebook explain`, `init --model`, `serve --model` and the model steps of `pages` and `update` send text taken from your project (after the scrubbing described below) to Claude through `claude -p`, and the answers are cached on disk in `<project>/.guidebook/cache`. Use `--no-model` to send nothing.
 - It writes only `.guidebook/` and `docs/guide-src/` (plus the built `docs/guide/`). It skips secrets, `.env*`, keys and git-ignored files, and scrubs the emails, tokens and absolute paths it recognises before anything is stored or written; check the output before you share a guide.
-- Still early. We have checked the pages in Chrome only. Where the project does not say something, the guide says "not known".
+- Still early. Where the project does not say something, the guide says "not known".
+- Privacy: see [PRIVACY.md](PRIVACY.md).
 
 ## Licence
 
-MIT. Copyright (c) 2026 Junaid Iqbal (Byterive).
+License: MIT. Copyright (c) 2026 Junaid Iqbal (Byterive).
 
-*Independent project by Byterive. Not affiliated with or endorsed by Anthropic.* [byterive.com](https://byterive.com)
+*Independent project by Byterive. Not affiliated with or endorsed by Anthropic.* · [byterive.com](https://byterive.com)
