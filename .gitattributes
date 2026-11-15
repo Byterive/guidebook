@@ -1,9 +1,4 @@
-* text=auto
-*.sh text eol=lf
-*.py text eol=lf
-*.md text eol=lf
+* text=auto eol=lf
+*.ps1 text eol=crlf
 *.png binary
 *.jpg binary
-*.pdf binary
-*.xlsx binary
-*.json text eol=lf
