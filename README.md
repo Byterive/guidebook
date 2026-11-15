@@ -4,7 +4,7 @@
 
 Plain-language guides, refreshed when your project changes.
 
-Version 0.2.2 · early, working
+Version 0.2.3 · early, working
 
 ## What it does
 

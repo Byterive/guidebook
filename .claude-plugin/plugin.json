@@ -1,6 +1,6 @@
 {
   "name": "guidebook",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "displayName": "Guidebook",
   "description": "Reads any project and writes plain-language HTML guides in several versions (layman, client, teammate, maintainer, quick-start), and keeps them current as the project changes.",
   "author": {
@@ -8,6 +8,7 @@
     "url": "https://byterive.com"
   },
   "homepage": "https://byterive.com",
+  "privacyPolicyUrl": "https://github.com/Byterive/guidebook/blob/main/PRIVACY.md",
   "repository": "https://github.com/Byterive/guidebook",
   "license": "MIT",
   "keywords": [
